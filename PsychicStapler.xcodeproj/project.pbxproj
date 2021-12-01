@@ -52,6 +52,8 @@
 		3FF4B82925011E950047642E /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4B82325011E950047642E /* SVProgressHUD.bundle */; };
 		3FF4B82C25012BFF0047642E /* AirdropOnlyActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4B82B25012BFF0047642E /* AirdropOnlyActivity.m */; };
 		3FF4B830250131DD0047642E /* ProcessModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FF4B82F250131DD0047642E /* ProcessModule.m */; };
+		8415998A268B193000028F21 /* ListViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84159989268B193000028F21 /* ListViewController.mm */; };
+		84159992268B298200028F21 /* PlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84159991268B298200028F21 /* PlistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +192,10 @@
 		3FF4B82B25012BFF0047642E /* AirdropOnlyActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirdropOnlyActivity.m; sourceTree = "<group>"; };
 		3FF4B82E250131DD0047642E /* ProcessModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcessModule.h; sourceTree = "<group>"; };
 		3FF4B82F250131DD0047642E /* ProcessModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcessModule.m; sourceTree = "<group>"; };
+		84159988268B193000028F21 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		84159989268B193000028F21 /* ListViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ListViewController.mm; sourceTree = "<group>"; };
+		84159990268B298200028F21 /* PlistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistViewController.h; sourceTree = "<group>"; };
+		84159991268B298200028F21 /* PlistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +298,10 @@
 			children = (
 				3F7513DF24C713A700DC892B /* ViewController.h */,
 				3F7513E024C713A700DC892B /* ViewController.mm */,
+				84159988268B193000028F21 /* ListViewController.h */,
+				84159989268B193000028F21 /* ListViewController.mm */,
+				84159990268B298200028F21 /* PlistViewController.h */,
+				84159991268B298200028F21 /* PlistViewController.m */,
 				3FCA5CF324D762950021FEDB /* ProcessDetailsViewController.h */,
 				3FCA5CF424D762950021FEDB /* ProcessDetailsViewController.mm */,
 				3F4072F924FB580D0016831B /* ApplicationTableViewCell.h */,
@@ -578,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7513E124C713A700DC892B /* ViewController.mm in Sources */,
+				84159992268B298200028F21 /* PlistViewController.m in Sources */,
 				3FF4B82625011E950047642E /* SVProgressAnimatedView.m in Sources */,
 				3F6EA07324F4005D001AD9C8 /* SSZipArchive.m in Sources */,
 				3FCA5CF524D762950021FEDB /* ProcessDetailsViewController.mm in Sources */,
@@ -597,6 +608,7 @@
 				3F6EA07224F4005D001AD9C8 /* mz_strm.c in Sources */,
 				3F6EA06C24F4005D001AD9C8 /* mz_strm_wzaes.c in Sources */,
 				3F4072FF24FC9CA90016831B /* NSError+ErrorHelper.m in Sources */,
+				8415998A268B193000028F21 /* ListViewController.mm in Sources */,
 				3F6EA06424F4005D001AD9C8 /* mz_strm_pkcrypt.c in Sources */,
 				3F4072FB24FB580D0016831B /* ApplicationTableViewCell.m in Sources */,
 				3FF4B82825011E950047642E /* SVIndefiniteAnimatedView.m in Sources */,
@@ -830,7 +842,7 @@
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4U46V6494;
+				DEVELOPMENT_TEAM = CZ6TZMJ6X7;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -850,7 +862,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-Wl,-U,_LICreateIconFromCachedBitmap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.selander.yet-another-code-decrypter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshaoduo.yacd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
@@ -865,7 +877,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4U46V6494;
+				DEVELOPMENT_TEAM = CZ6TZMJ6X7;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"HAVE_INTTYPES_H=1",
@@ -884,7 +896,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = "-Wl,-U,_LICreateIconFromCachedBitmap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.selander.yet-another-code-decrypter";
+				PRODUCT_BUNDLE_IDENTIFIER = com.youshaoduo.yacd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				TARGETED_DEVICE_FAMILY = "1,2";

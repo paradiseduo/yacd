@@ -14,6 +14,7 @@
 #import "ProcessDetailsViewController.h"
 #import "UIViewController+DisplayError.h"
 #import "ApplicationTableViewCell.h"
+#import "ListViewController.h"
 
 @interface ViewController () <UITableViewDataSource,  UISearchResultsUpdating>
 
@@ -97,7 +98,7 @@ extern int mremap_encrypted(caddr_t addr, size_t len,
         NSLog(@"%@", err);
     }
 
-    id<LSApplicationWorkspaceProtocol> LSApplicationWorkspace = NSClassFromString(@"LSApplicationWorkspace");
+    id<LSApplicationWorkspaceProtocol> LSApplicationWorkspace = (id<LSApplicationWorkspaceProtocol>)NSClassFromString(@"LSApplicationWorkspace");
     self.installedApplications  = [[LSApplicationWorkspace defaultWorkspace] allApplications];
     self.filteredInstalledApplications = self.installedApplications;
     [self.tableView reloadData];
@@ -134,4 +135,11 @@ extern int mremap_encrypted(caddr_t addr, size_t len,
     [self refreshDataSource];
 }
 
+- (IBAction)listTap:(UIBarButtonItem *)sender {
+    ListViewController * cc = [[ListViewController alloc] init];
+    cc.filteredInstalledApplications = self.filteredInstalledApplications;
+    cc.installedApplications = self.installedApplications;
+    cc.processDictionary = self.processDictionary;
+    [self.navigationController pushViewController:cc animated:YES];
+}
 @end
